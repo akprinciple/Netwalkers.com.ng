@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" type="images/jpg" href="images/favicon.ico">
+
+</head>
+<body style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('images/login-backgound.jpg');">
+	<div class="container">
+		<p class="login">Login</p>
+		<form method="post" enctype="multipart/form-data">
+		<label for="username">Username</label>
+		<div>
+			<input type="text" name="username" required class="username pwd" placeholder="Username" id="username">
+		</div>
+		<label for="password" class="">Password</label>
+		<div>
+			<input type="password" required name="password" class="username" placeholder="Password" id="password">
+		</div>
+		<a href="forgetpassword.php" class="fgt">Forgot Password?</a>
+		<div>
+			<button type="submit" name="submit" class="btn" id="btn" onclick="buttonClick();">Login</button>
+		</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="js/jscript.js"></script>
+</body>
+</html>

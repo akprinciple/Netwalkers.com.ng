@@ -1,29 +1,236 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="shortcut icon" type="images/jpg" href="images/favicon.ico">
-
+	<title>Netwalkers</title>
+	<link rel="stylesheet" type="text/css" href="css/cssstyle.css">
+	<link rel="stylesheet" type="text/css" href="font/css/all.min.css">
 </head>
-<body style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('images/login-backgound.jpg');">
+<body>
 	<div class="container">
-		<p class="login">Login</p>
-		<form method="post" enctype="multipart/form-data">
-		<label for="username">Username</label>
-		<div>
-			<input type="text" name="username" required class="username pwd" placeholder="Username" id="username">
+		<div class="row">
+			<!-- Left SideBar -->
+			<div class="col">
+				<div class="column">
+				<div class="img-col">
+				<img src="images/logo.png" width="70%" class="img">
+				</div>
+
+				<div class="bed">
+					<span class="fas fa-layer-group"></span>
+					Bed Status
+					<span class="fas fa-long-arrow-alt-right"></span>
+
+				</div>
+				<a href="" class="link">
+					<span class="fas fa-shopping-bag mr"></span> 
+						Front office
+					<span class="fas fa-angle-right"></span>
+				</a>
+				<a href="" class="link">
+					<span class="fas fa-stethoscope mr"></span> 
+						HIS
+					<span class="fas fa-angle-right"></span>
+				</a>
+				<a href="" class="link">
+					<span class="fas fa-eye-dropper mr"></span> 
+						Blood Bank
+					<span class="fas fa-angle-right"></span>
+				</a>
+				<a href="javacript:void(0)" style="text-decoration: none;">
+					<div id="first" class="link" onclick="display()">
+					<span class="fas fa-map-marker-alt mr"></span> 
+						LIS <small class="small"><i>click here</i></small>
+					<span class="fas fa-angle-right" id="caret"></span>
+					</div>
+					<div id="second" class="link" onclick="hide()">
+					<span class="fas fa-map-marker-alt mr"></span> 
+						LIS <small class="small"><i>click here</i></small>
+					<span class="fas fa-angle-down mr"></span>
+					</div>
+				</a>
+				</div>
+				<!-- Dropdown -->
+				<div class="show" id="dropdown">
+					<a href="" class="link">Order</a>
+					<a href="" class="link">QC</a>
+					<a href="" class="link">Phleb</a>
+					<a href="" class="link">Analysers</a>
+				</div>
+				<div class="column">
+					<a href="" class="link">
+					<span class="fas fa-eye-dropper mr"></span> 
+						RIS
+					<!-- <span class="fas fa-caret-right"></span> -->
+				</a>
+				<a href="" class="link">
+					<span class="fas fa-heart mr"></span> 
+						Insurance
+					<span class=""></span>
+				</a>
+				</div>
+			</div>
+			<!-- Right Sidebar -->
+			<div class="col-1">
+				<!-- Header -->
+				<div class="top row">
+					<div class="w-75">
+					<span class="fas fa-bars"></span>
+					<span class="fas fa-search p">&nbsp;</span> 
+					<span class="">Search for patient</span>
+					</div>
+					<div class="w-25 row">
+						<div style="padding-top: 6px;">
+						<span class="fas fa-bell">&nbsp;</span>
+						<span class="fas fa-envelope">&nbsp;</span>
+						<span class="fas fa-expand-arrows-alt">&nbsp;</span>
+					</div>
+						<img src="images/logo_sm.png" class="img_small">
+						<div class="ml pointer" onclick="slidein()" id="firstsam">
+							Samson Monday 
+							<span class="fas fa-angle-down ml pt">
+								<small class="small" style="position: absolute; top: 20px; right: 30px;"><i>click here</i></small>
+							</span>
+						</div>
+						<div class="ml pointer" style="display: none;" onclick="slideout()" id="secondsam">Samson Monday 
+							<span class="fas fa-angle-down ml pt">
+								<small class="small" style="position: absolute; top: 20px; right: 30px;"><i>click here</i></small>
+							</span>
+
+						</div>
+					</div>
+					<!-- Dropdown -->
+					<div class="position" id="position">
+						<div class="arrow"></div>
+						<a href="" class="row p-link">
+							<div class="fas fa-user p-2 border radius c"></div>
+							<div class="p">Profile
+								<p class="m-0"> Update and Manage</p>
+							</div>
+						</a>
+						<a href="" class="row p-link">
+							<div class="fas fa-check-square p-2 border radius c"></div>
+							<div class="p">Profile
+								<p class="m-0"> Update and Manage</p>
+							</div>
+						</a>
+						<a href="" class="row p-link">
+							<div class="fas fa-exclamation-triangle p-2 border radius c"></div>
+							<div class="p">Profile
+								<p class="m-0"> Update and Manage</p>
+							</div>
+						</a>
+						<a href="" class="p-link log">
+							<span class="fas fa-power-off" style="color: #fff;"></span>
+							Logout
+						</a>
+					</div>
+				</div>
+				<!-- Body -->
+			<div class="row mt pl">
+				<div class="mt"></div>
+			<!-- Profile Image -->
+				<div class="col-sm">
+					<div class="dp-col">
+						<img src="images/dp.png" class="dp">
+						<p class="m-0 text-center p fwb c pointer pointer">Isaac Isaac</p>
+					</div>
+					<!-- Buttons -->
+					<div class="mt text-center">
+					<button class="btn1 bgc pointer">Change Password</button>
+					<button class="btn2 pointer">Edit</button>
+				</div>
+				<!-- Table -->
+				<table class="tab mt" cellpadding="10px">
+					<tr class="str text-center">
+						<td style="">StaffId</td>
+						<td>Staff001w222</td>
+					</tr>
+					<tr class=" text-center">
+						<td style="">Role</td>
+						<td>Admin</td>
+					</tr>
+					<tr class="text-center">
+						<td style="">Designation</td>
+						<td>CMD</td>
+					</tr>
+					<tr class="str text-center">
+						<td style="">Department</td>
+						<td>4</td>
+					</tr>
+				</table>
+				</div>
+				<!--Body  -->
+				<div class="col-md">
+					<section class="staff shadow bg-white mt w-100">
+						<span class=" ml">Hr/Staff profile</span>
+					</section>
+					<section class="mt-1 shadow bg-white p-2">
+						<span class="bgc p s-radius mt pointer" style="color: #fff;">Profile</span>
+						<span class="bg-white p shadow s-radius pointer">Payroll</span>
+						<span class="bg-white p shadow s-radius pointer">Leaves</span>
+						<span class="bg-white p shadow s-radius pointer">Attendance</span>
+						<span class="bg-white p shadow s-radius pointer">Documents</span>
+						<span class="bg-white p shadow s-radius pointer">Timeline</span>
+					</section>
+					<!--Table 2  -->
+					<section class="p bg-white shadow mt">
+						<table class="tab mt" cellpadding="10px">
+							<tr>
+								<td class="tl">Phone</td>
+								<td class="tr">+234778902</td>
+							</tr>
+							<tr class="str">
+								<td class="tl">Emergency Contact</td>
+								<td class="tr">+234778902</td>
+							</tr>
+							<tr>
+								<td class="tl">Email</td>
+								<td class="tr">Isaacodinakafranklin@gmail.com</td>
+							</tr>
+							<tr class="str">
+								<td class="tl">Date of Birth</td>
+								<td class="tr">2021-07-06</td>
+							</tr>
+							<tr>
+								<td class="tl">Speciality</td>
+								<td class="tr">1</td>
+							</tr>
+							<tr class="str">
+								<td class="tl">Father Name</td>
+								<td class="tr">Edwin Isaac</td>
+							</tr>
+							<tr>
+								<td class="tl">Mother Maiden Name</td>
+								<td class="tr">Loveth Ndubuka</td>
+							</tr>
+							<tr class="str">
+								<td class="tl">Highest Qualification</td>
+								<td class="tr">B.Eng</td>
+							</tr>
+							<tr>
+								<td class="tl">Qualification Date</td>
+								<td class="tr">2021</td>
+							</tr>
+						</table>
+					</section>
+				</div>
+			</div>
+			</div>
+			
 		</div>
-		<label for="password" class="">Password</label>
-		<div>
-			<input type="password" required name="password" class="username" placeholder="Password" id="password">
-		</div>
-		<a href="forgetpassword.php" class="fgt">Forgot Password?</a>
-		<div>
-			<button type="submit" name="submit" class="btn" id="btn" onclick="buttonClick();">Login</button>
-		</div>
-		</form>
 	</div>
+	<footer class="bg-white p">
+		<div class="float-l">
+			CliniquePlus EMR by Netwalkers NG &copy; 2021. All rights reserved.
+		</div>
+		<div class="float-r">
+			<span class="b-right p pointer">About us</span>
+			<span class="b-right p pointer">Contact Us</span>
+			<span class="b-right p pointer">terms of service</span>
+			<span class="p pointer">Privacy Policy</span>
+			<!-- <span class="b-right p"></span> -->
+		</div>
+	</footer>
 	<script type="text/javascript" src="js/jscript.js"></script>
 </body>
 </html>
